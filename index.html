@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canon</title>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <title>Canon</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="resources/css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="header">
+      <img id="logo" src="resources/images/Mask Group.png" />
+    </div>
+
+    <div id="optionBox" class="layer1">
+      <div id="container">
+        <button onclick="hider('login')" id="logbox" class="loginButton">
+          <h1 id="login">Login</h1>
+        </button>
+      </div>
+
+      <div id="container2">
+        <button onclick="hider('signup')" id="signbox" class="signupButton">
+          <h1 id="signup">Sign up</h1>
+        </button>
+      </div>
+    </div>
+
+    <div id="loginBox" class="hidden layer2">
+      <form class="login">
+        <div class="container4">
+          <input
+            id="loginbox"
+            type="text"
+            name="email"
+            placeholder="example@email.com"
+          />
+        </div>
+
+        <div class="container5">
+          <input
+            id="loginbox2"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+
+        <div class="container6">
+          <button id="loginbox">
+            <h1 id="loginButton">Login</h1>
+          </button>
+        </div>
+
+        <p class="error"></p>
+      </form>
+      <div>
+        <a class="switch" onclick="hider('signup')">Don't have an account?</a>
+      </div>
+    </div>
+
+    <div id="signupBox" class="hidden layer3">
+      <form class="signup">
+        <div id="container3">
+          <input
+            class="registerbox"
+            type="text"
+            name="email"
+            placeholder="example@email.com"
+          />
+        </div>
+
+        <div id="container3">
+          <input
+            class="registerbox"
+            type="text"
+            name="username"
+            placeholder="username"
+          />
+        </div>
+
+        <div id="container3">
+          <input
+            class="registerbox"
+            type="password"
+            name="password"
+            placeholder="password"
+          />
+        </div>
+
+        <div id="container4">
+          <button id="signupbox">
+            <h1 id="signupbutton">Sign Up</h1>
+          </button>
+        </div>
+
+        <p class="error"></p>
+      </form>
+      <div>
+        <a class="switch" onclick="hider('login')">Already have an account?</a>
+      </div>
+    </div>
+    <div class="signout hidden">
+      <button onclick="signOut();">Sign out</button>
+    </div>
+    <script src="resources/js/firebase.js"></script>
+    <script src="resources/js/main.js"></script>
+  </body>
+</html>
