@@ -2,12 +2,14 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 body {
   background-image: url("../images/image\ 20.png");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
+  
 }
 
 #header {
@@ -27,6 +29,7 @@ body {
 }
 
 #container {
+  
   display: flex;
   margin-top: 25%;
   justify-content: center;
@@ -34,6 +37,7 @@ body {
 
 #container2 {
   display: flex;
+  
   margin-top: 20%;
   justify-content: center;
 }
@@ -44,6 +48,7 @@ body {
   justify-content: center;
 }
 #logbox {
+  
   width: 70vw;
   height: 12vh;
   background: #161616;
@@ -111,6 +116,7 @@ body {
   box-shadow: 0px 4px 10px #000000;
   text-align: center;
   border: none;
+  margin-top: 5vh;
 }
 
 #signupbutton {
@@ -123,28 +129,22 @@ body {
   color: #eef0f2;
 }
 
-#container4 {
-  display: flex;
-  margin-top: 10%;
-  justify-content: center;
-}
+
 
 .layer1 {
   z-index: 0;
-  position: absolute;
+  
 }
 .layer2 {
   z-index: 1;
-  position: absolute;
+  
 }
 .layer3 {
   z-index: 2;
-  position: absolute;
+  
 }
 
-.relative {
-  position: relative;
-}
+
 
 #loginButton {
   margin-top: 1vh;
@@ -180,7 +180,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 3vh;
-
+  margin-top: 2.5vh;
   color: #eef0f2;
 }
 
@@ -208,4 +208,36 @@ body {
   font-size: 4vh;
 
   color: #eef0f2;
+}
+
+.login, .signup{
+  width: 100%;
+  position: absolute;
+  top: 30vh;
+  text-align: center;
+}
+
+.container5, .container6{
+  margin-top: 5vh;
+}
+
+#q{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.switch{
+  position: absolute;
+  bottom: 10vh;
+  text-align: center;
+  
+  color: #eef0f2;
+  font-size: 2.5vh;
+  z-index: +1;
+  
+}
+
+.error{
+  color: #c2c2c2;
 }
