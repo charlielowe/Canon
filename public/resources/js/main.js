@@ -4,6 +4,8 @@ var signupBox = document.getElementById("signupBox");
 var register = document.querySelector(".signup");
 var login = document.querySelector(".login");
 var signout = document.querySelector(".signout");
+var firestore = firebase.firestore();
+var nospace = document.getElementsByClassName("nospace");
 
 function hider(option) {
   optionBox.style.visibility = "hidden";
@@ -23,19 +25,35 @@ register.addEventListener("submit", e => {
   const password = register.password.value;
   const username = register.username.value;
 
-  firebase.auth().createUserWithEmailAndPassword(email, password);
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(result => {
+      docRef = firestore.doc("users/" + result.user.uid);
+      docRef
+        .set({
+          username: username,
+          bio: null,
+          pfp: null
+        })
+        .then(function() {
+          /*
+          TODO: Unique usernames
 
-  async function checkUser() {
-    await firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        user.updateProfile({
-          displayName: username
+          docRef = firestore.doc("usernames/" + username);
+          docRef.set({
+            uid: result.user.uid                     
+          });
+          */
+          console.log("good");
+          window.location.replace("profile.html");
+        })
+        .catch(function(error) {
+          console.log(error);
         });
-      }
     });
-  }
-  checkUser();
 });
+
 /*Login*/
 login.addEventListener("submit", e => {
   e.preventDefault();
@@ -47,6 +65,7 @@ login.addEventListener("submit", e => {
     .then(user => {
       login.reset();
       login.querySelector(".error").textContent = "Success";
+      window.location.replace("profile.html");
     })
     .catch(e => {
       login.querySelector(".error").textContent = e.message;
@@ -58,15 +77,18 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     login.classList.add("hidden");
     register.classList.add("hidden");
-    signout.classList.remove("hidden");
   } else {
     login.classList.remove("hidden");
     register.classList.remove("hidden");
-    signout.classList.add("hidden");
   }
 });
 
-/*Sign out*/
-function signOut() {
-  firebase.auth().signOut();
+/*Prevents entering spaces*/
+for (i = 0; i < 5; i++) {
+  nospace[i].addEventListener("keypress", function(event) {
+    var key = event.keyCode;
+    if (key === 32) {
+      event.preventDefault();
+    }
+  });
 }

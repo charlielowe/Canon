@@ -9,7 +9,6 @@ body {
   background-image: url("../images/image\ 20.png");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
-  
 }
 
 #header {
@@ -29,7 +28,6 @@ body {
 }
 
 #container {
-  
   display: flex;
   margin-top: 25%;
   justify-content: center;
@@ -37,7 +35,7 @@ body {
 
 #container2 {
   display: flex;
-  
+
   margin-top: 20%;
   justify-content: center;
 }
@@ -48,7 +46,6 @@ body {
   justify-content: center;
 }
 #logbox {
-  
   width: 70vw;
   height: 12vh;
   background: #161616;
@@ -129,22 +126,15 @@ body {
   color: #eef0f2;
 }
 
-
-
 .layer1 {
   z-index: 0;
-  
 }
 .layer2 {
   z-index: 1;
-  
 }
 .layer3 {
   z-index: 2;
-  
 }
-
-
 
 #loginButton {
   margin-top: 1vh;
@@ -210,34 +200,34 @@ body {
   color: #eef0f2;
 }
 
-.login, .signup{
+.login,
+.signup {
   width: 100%;
   position: absolute;
   top: 30vh;
   text-align: center;
 }
 
-.container5, .container6{
+.container5,
+.container6 {
   margin-top: 5vh;
 }
 
-#q{
+#q {
   display: flex;
   justify-content: center;
-  
 }
 
-.switch{
+.switch {
   position: absolute;
   bottom: 10vh;
   text-align: center;
-  
+
   color: #eef0f2;
   font-size: 2.5vh;
   z-index: +1;
-  
 }
 
-.error{
+.error {
   color: #c2c2c2;
 }
