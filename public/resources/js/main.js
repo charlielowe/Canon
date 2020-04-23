@@ -19,7 +19,7 @@ function hider(option) {
 }
 
 /*Register*/
-register.addEventListener("submit", e => {
+register.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = register.email.value;
   const password = register.password.value;
@@ -28,15 +28,15 @@ register.addEventListener("submit", e => {
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
-    .then(result => {
+    .then((result) => {
       docRef = firestore.doc("users/" + result.user.uid);
       docRef
         .set({
           username: username,
           bio: null,
-          pfp: null
+          pfp: null,
         })
-        .then(function() {
+        .then(function () {
           /*
           TODO: Unique usernames
 
@@ -46,37 +46,36 @@ register.addEventListener("submit", e => {
           });
           */
           console.log("good");
-          window.location.replace("profile.html");
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.log(error);
         });
     });
 });
 
 /*Login*/
-login.addEventListener("submit", e => {
+login.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = login.email.value;
   const password = login.password.value;
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
-    .then(user => {
+    .then((user) => {
       login.reset();
       login.querySelector(".error").textContent = "Success";
-      window.location.replace("profile.html");
     })
-    .catch(e => {
+    .catch((e) => {
       login.querySelector(".error").textContent = e.message;
     });
 });
 
 /*User state*/
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     login.classList.add("hidden");
     register.classList.add("hidden");
+    window.location.replace("profile.html");
   } else {
     login.classList.remove("hidden");
     register.classList.remove("hidden");
@@ -85,7 +84,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 /*Prevents entering spaces*/
 for (i = 0; i < 5; i++) {
-  nospace[i].addEventListener("keypress", function(event) {
+  nospace[i].addEventListener("keypress", function (event) {
     var key = event.keyCode;
     if (key === 32) {
       event.preventDefault();
