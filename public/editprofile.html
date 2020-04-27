@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="signout">
+      <button onclick="signOut();">Sign out</button>
+    </div>
+    <form class="profile">
+      <input
+        type="text"
+        class="username nospace"
+        placeholder="username"
+        maxlength="16"
+      />
+      <input type="text" class="bio" placeholder="bio" maxlength="100" />
+      <input type="text" class="photo" placeholder="profile picture url" />
+    </form>
+    <button class="update">Update</button>
+    <h1 class="outputText"></h1>
+    <a href="home.html">home</a>
+    <script src="resources/js/firebase.js"></script>
+    <script src="resources/js/editprofile.js"></script>
+  </body>
+</html>

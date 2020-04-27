@@ -3,26 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Canon</title>
+    <title>test posts</title>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
-
-    <link rel="stylesheet" href="resources/css/style.css" />
-    <title>Profile</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link href="resources/css/main.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="header">
-      <img id="logo" src="resources/images/Mask Group.png" />
+    <div class="upload">
+      <input type="text" class="caption" />
     </div>
-
-    </div>
+    <input type="file" value="upload" id="fileButton" />
+    <button class="send">Post</button>
     <script src="resources/js/firebase.js"></script>
-    <script src="resources/js/main.js"></script>
+    <script src="resources/js/home.js"></script>
   </body>
 </html>
