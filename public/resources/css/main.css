@@ -159,7 +159,7 @@ body {
   background: #0f0f0f;
 }
 
-#loginbox {
+.loginbox {
   width: 80vw;
   height: 8vh;
   background: #353535;
