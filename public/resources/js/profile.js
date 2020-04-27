@@ -4,6 +4,7 @@ const outputText = document.querySelector(".outputText");
 const nospace = document.querySelector(".nospace");
 const photo = document.querySelector(".photo");
 const bio = document.querySelector(".bio");
+const username = document.querySelector(".username");
 
 /*Sign out*/
 function signOut() {
@@ -38,19 +39,21 @@ nospace.addEventListener("keypress", function (event) {
 
 /*Get profile*/
 function load() {
-  var docRef = firestore
-    .collection("users")
-    .doc(firebase.auth().currentUser.uid);
+  var userId = firebase.auth().currentUser.uid;
+  var docRef = firebase.firestore().collection("users").doc(userId);
+
   docRef
     .get()
     .then(function (doc) {
-      username.value = doc.data().username;
-      bio.value = doc.data().bio;
-      photo.value = doc.data().pfp;
-      console.log("Profile loaded.");
+      if (doc.exists) {
+        console.log("Document data:");
+        bio.value = doc.data().bio;
+        photo.value = doc.data().pfp;
+        username.value = doc.data().username;
+      }
     })
     .catch(function (error) {
-      outputText.textContent = error;
+      console.log(error);
     });
 }
 

@@ -10,4 +10,5 @@
     measurementId: "G-HJJ9HKKC9Y",
   };
   firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
 })();
