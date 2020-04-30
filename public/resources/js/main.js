@@ -75,7 +75,7 @@ firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     login.classList.add("hidden");
     register.classList.add("hidden");
-    window.location.replace("profile.html");
+    window.location.replace("editprofile.html");
   } else {
     login.classList.remove("hidden");
     register.classList.remove("hidden");
