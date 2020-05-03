@@ -16,35 +16,48 @@ fileButton.addEventListener("change", function (e) {
   var file = e.target.files[0];
   console.log(postId);
 
-  var storageRef = firebase
-    .storage()
-    .ref("images/" + firebase.auth().currentUser.uid + "/" + postId);
+  var storageRef = firebase.storage().ref();
 
-  storageRef.put(file);
-});
-
-/* 
-Uploads post using the url from images
-
-Posts don't work atm 
-
-async function sendPost() {
-  var url =
-    "https://firebasestorage.googleapis.com/v0/b/canon-d4c8a.appspot.com/o/images/" +
-    firebase.auth().currentUser.uid +
-    "/" +
-    postId;
-  console.log(url);
-  docRef = firestore.doc(
-    "posts/" + firebase.auth().currentUser.uid + "/" + postId
+  var imagesRef = storageRef.child(
+    "images/" + firebase.auth().currentUser.uid + "/" + postId
   );
-  docRef
-    .set({
-      picture: url,
-      caption: captions.value,
-    })
-    .catch(function (error) {
+
+  var uploadTask = imagesRef.put(file);
+  uploadTask.on(
+    "state_changed",
+    function (snapshot) {
+      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log("Upload is " + progress + "% done");
+      switch (snapshot.state) {
+        case firebase.storage.TaskState.PAUSED:
+          console.log("Upload is paused");
+          break;
+        case firebase.storage.TaskState.RUNNING:
+          console.log("Upload is running");
+          break;
+      }
+    },
+    function (error) {
       console.log(error);
-    });
-}
-*/
+    },
+    function () {
+      uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+        console.log("File available at", downloadURL);
+
+        docRef = firebase
+          .firestore()
+          .collection("posts/")
+          .doc(firebase.auth().currentUser.uid);
+        docRef
+          .set({
+            picture: downloadURL,
+            caption: caption.value,
+            uid: postId,
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      });
+    }
+  );
+});
