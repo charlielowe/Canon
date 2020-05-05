@@ -2,17 +2,16 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  
 }
 
-body {
-  background-image: url("../images/image\ 20.png");
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-}
+
 
 #header {
-  width: 100vw;
+  width: 100%;
   height: 17vh;
   margin: 0px;
   padding: 0px;
@@ -20,13 +19,30 @@ body {
   box-shadow: 0px 4px 5px #000000;
   text-align: center;
 }
-
+#headerHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  margin: 0px;
+  padding: 0px;
+  background:  #424242;
+  box-shadow: 0px 4px 5px #000000;
+ 
+}
 #logo {
   width: 60vw;
   height: 7vh;
   margin-top: 5vh;
 }
-
+#logoHome {
+  width: 50vw;
+  height: 7vh;
+  margin: auto;
+  position: absolute;
+  
+}
 #container {
   display: flex;
   margin-top: 25%;
@@ -230,4 +246,71 @@ body {
 
 .error {
   color: #c2c2c2;
+}
+.camera-icon {
+ padding-left: 75vw;
+ height: 12vh;
+ 
+ 
+}
+.feed {
+  height: 80vh;
+  max-height: 80vh;
+  background-color: #0f0f0f;
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+
+}
+.navbar {
+  display: flex;
+  height: 10vh;
+   
+  background-color: #424242;
+}
+.navIcons {
+  height: 50px;
+  margin: auto;
+  
+}
+.iconsDiv {
+  display: flex;
+  width: 25%;
+  
+}
+
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+  
+  
+.pp {
+  
+  margin-left: 7vw;
+  margin-right: 5vw;
+  height: 9vh;
+  width: 9vw;
+  border-radius: 50%;
+}
+.pName {
+  
+  margin: 0px;
+  text-align: center;
+  font-size: 5vh;
+  font-family: Roboto;
+  color: #c2c2c2;
+}
+.postImg {
+  height: 70vh;
+  width: 100vw;
+  max-height: 70vh;
+  max-width: 100%;
+}
+.post {
+  display: inline-block;
+  overflow-y: hidden;
 }
