@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Canon</title>
-    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="resources/css/style.css" />
     <title>Profile</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link href="resources/css/main.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div id="header">
-      <img id="logo" src="resources/images/Mask Group.png" />
+    <link rel="stylesheet" href="resources/css/main.css" type="text/css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/nav.css">
+</head>
+<body>
+    <div id="settingsheader">
+       
+        <img id="settingslogo" src="resources/images/Mask Group.png">
     </div>
 
+    <div id="profinfo">
+      <img id="profpic" src="resources/images/profpic.png">
+      <h1 id="username">Photography_Pro</h1>
+      <p id="bio">My name is Photography_Pro and I have been taking pictures for 12 years. I use a Canon EOS 250D and an array of Canon lenses. </p>
+      
     </div>
-    <script src="resources/js/firebase.js"></script>
-  </body>
+    <div id="gal">
+      <img class="galimg" src="resources/images/gal1.png">
+      <img class="galimg" src="resources/images/gal2.png">
+      <img class="galimg" src="resources/images/gal3.png">
+      <img class="galimg" src="resources/images/gal4.png">
+      <img class="galimg" src="resources/images/gal5.png">
+      <img class="galimg" src="resources/images/gal6.png">
+      <img class="galimg" src="resources/images/gal1.png">
+      <img class="galimg" src="resources/images/gal2.png">
+      <img class="galimg" src="resources/images/gal3.png"></div>
+      <div id="space"></div>
+    <div id="navbar">
+        <a class="active" href="javascript:void(0)"><img src="resources/images/homeicon.png"></a>
+        <a href="javascript:void(0)"><img src="resources/images/Group 12.png"></a>
+      </div>
+    <script src="resources/js/main.js"></script>
+    <script src="resources/js/nav.js"></script>
+</body>
 </html>
