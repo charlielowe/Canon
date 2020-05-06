@@ -195,15 +195,18 @@ body {
   height: 7vh;
   position: fixed;
   top: 0;
+  margin: 0px;
+  padding: 0px;
   background: #424242;
 }
 
 #settingsnav {
   overflow: hidden;
-  margin-top: 8vh;
+  height: 100%;
+  margin-top: 6.5vh;
   display: flex;
   flex-direction: column;
-  background-color: #333;
+  background-color: #161616;
   position: fixed;
   text-align: left;
   top: 0;
@@ -216,11 +219,32 @@ body {
   float: left;
   display: block;
   color: #f2f2f2;
+  background-color: #333;
   text-align: center;
- border: #ffffff;
+  height: 15vh;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  margin-bottom: 3vh;
+  font-family: Roboto;
+  padding-top: 4vh;
+  margin-top: 3vh;
+
+}
+
+#editprofilecontainer{
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 #settingsarrow {
@@ -229,7 +253,29 @@ body {
   width: 6vw;
   height: 3vh;
   left: 5%;
-  top: 1.5%;
+  top: 20%;
+}
+
+#editprofileset{
+  background-color: #333;
+  border-style: solid;
+  color: white;
+  border-color: black;
+  height: 5vh;
+}
+
+.update{
+  margin-top: 15vh;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4vh;
+  height: 8vh;
+  width: 40vw;
+  color: white;
+  background-color: #333;
+  border: none;
+
 }
 
 #settingslogo {

@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/main.css" type="text/css">
     <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
     <div id="settingsheader">
-        <img id="settingsarrow" src="resources/images/Group 9.png">
+       <a href="profile.html"> <img id="settingsarrow" src="resources/images/Group 9.png"></a>
         <img id="settingslogo" src="resources/images/Mask Group.png">
 
     </div>
     <div id="settingsnav">
-    <a class="setting" href="#">Edit Profile</a>
-    <a class="setting" href="#">Password</a>
-    <a class="setting" href="#">Terms and Conditions</a>
-    <a class="setting" href="#">Logout</a>
+    <a class="setting" href="settings/editprofile.html"><p>Edit Profile</p></a>
+    <a class="setting" href="#"><p class="settingp">Password</p></a>
+    <a class="setting" href="#"><p class="settingp">Terms and Conditions</p></a>
+    <a class="setting" onclick="signOut()" href="#"><p class="settingp">Logout</p></a>
     </div>
+    <script src="resources/js/firebase.js"></script>
+    <script src="resources/js/settings.js"></script>
     <script src="resources/js/main.js"></script>
+    <script src="resources/js/nav.js"></script>
 </body>
 </html>

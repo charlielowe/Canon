@@ -41,7 +41,7 @@ register.addEventListener("submit", (e) => {
           TODO: Unique usernames
           */
           console.log("good");
-          window.location.replace("editprofile.html");
+          window.location.replace("profile.html");
         })
         .catch(function (error) {
           console.log(error);
@@ -60,7 +60,7 @@ login.addEventListener("submit", (e) => {
     .then((user) => {
       login.reset();
       login.querySelector(".error").textContent = "Success";
-      window.location.replace("editprofile.html");
+      window.location.replace("profile.html");
     })
     .catch((e) => {
       login.querySelector(".error").textContent = e.message;
@@ -72,7 +72,7 @@ firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     login.classList.add("hidden");
     register.classList.add("hidden");
-    window.location.replace("editprofile.html");
+    window.location.replace("profile.html");
   } else {
     login.classList.remove("hidden");
     register.classList.remove("hidden");
@@ -93,7 +93,7 @@ for (i = 0; i < 5; i++) {
 (function () {
   firebase.auth().onAuthStateChanged((result) => {
     if (result != null) {
-      window.location.replace("editprofile.html");
+      window.location.replace("profile.html");
     }
   });
 })();
