@@ -1,50 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
     <title>Settings</title>
-    <link rel="stylesheet" href="../resources/css/main.css" type="text/css">
-    <link rel="stylesheet" href="../resources/css/style.css">
-    <link rel="stylesheet" href="../resources/css/nav.css">
-</head>
-<body>
-    <div id="settingsheader">
-        <a href="../settings.html"><img id="settingsarrow" src="../resources/images/Group 9.png"></a>
-        <img id="settingslogo" src="../resources/images/Mask Group.png">
-    </div>
-<div id="editprofilecontainer">
-    
-    <form class="profile">
-      <input
-        type="text"
-        id="editprofileset"
-        class="username nospace"
-        placeholder="username"
-        maxlength="16"
-      />
-      <input type="text" id="editprofileset" class="bio" placeholder="bio" maxlength="100" />
-      <input type="text" id="editprofileset" class="photo" placeholder="profile picture url" />
-    </form>
-    <button class="update">Update</button>
-    <h1 class="outputText"></h1>
-    
-   </div>
 
+    <link rel="stylesheet" href="../resources/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../resources/css/nav.css" />
+  </head>
+  <body>
+    <div id="settingsheader">
+      <a href="../settings.html"
+        ><img id="settingsarrow" src="../resources/images/Group 9.png"
+      /></a>
+      <img id="settingslogo" src="../resources/images/Mask Group.png" />
+    </div>
+    <div id="editprofilecontainer">
+      <form class="profile">
+        <input
+          type="text"
+          id="editprofileset"
+          class="username nospace"
+          placeholder="username"
+          maxlength="16"
+        />
+        <input
+          type="text"
+          id="editprofileset"
+          class="bio"
+          placeholder="bio"
+          maxlength="100"
+        />
+      </form>
+      <input type="file" id="fileButton" />
+      <button class="update">Update</button>
+      <h1 class="outputText"></h1>
+    </div>
 
     <div id="navbar">
-        <a href="javascript:void(0)"><img src="../resources/images/homeicon.png"></a>
-        <a href="javascript:void(0)"><img src="../resources/images/Group 12.png"></a>
-      </div>
-      
-      <script src="../resources/js/firebase.js"></script>
-    
+      <a href="javascript:void(0)"
+        ><img src="../resources/images/homeicon.png"
+      /></a>
+      <a href="javascript:void(0)"
+        ><img src="../resources/images/Group 12.png"
+      /></a>
+    </div>
+
+    <script src="../resources/js/firebase.js"></script>
+
     <script src="../resources/js/editprofile.js"></script>
     <script src="../resources/js/nav.js"></script>
-</body>
+  </body>
 </html>
