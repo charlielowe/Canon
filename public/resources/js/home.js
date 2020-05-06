@@ -61,3 +61,5 @@ fileButton.addEventListener("change", function (e) {
     }
   );
 });
+/*Uploads post using the url from images*/
+
