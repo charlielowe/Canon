@@ -264,6 +264,10 @@ body {
   height: 5vh;
 }
 
+.outputText{
+  color: white;
+}
+
 .update{
   margin-top: 15vh;
   font-family: Roboto;
