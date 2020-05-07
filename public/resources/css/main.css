@@ -40,12 +40,13 @@ body {
  
 }
 #logo {
-  
-  height: 5vh;
-  margin-top: 70vh;
-  padding-top: 5vh;
+  width: 40vw;
+  height: 7vh;
+  margin-top: 7vh;
   margin-left: 10px;
-  max-width: 400px;
+  max-width: 500px;
+
+  padding-top: 4vh;
   min-width: 200px;
   margin: auto;
 }
@@ -256,7 +257,7 @@ body {
   height: 15vh;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 5vw;
   margin-bottom: 3vh;
   font-family: Roboto;
   padding-top: 4vh;
@@ -268,6 +269,8 @@ body {
   margin-top: 30vh;
   text-align: center;
 }
+
+
 
 .profile{
   display: flex;
@@ -293,7 +296,8 @@ body {
   border-style: solid;
   color: white;
   border-color: black;
-  height: 5vh;
+  height: 10vh;
+  font-size: 2vh;
 }
 
 .outputText{
@@ -317,7 +321,7 @@ body {
 #settingslogo {
   margin-top: 1vh;
   height: 4vh;
-  width: 35vw;
+  width: 30vw;
   
 }
 

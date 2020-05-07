@@ -33,8 +33,9 @@ register.addEventListener("submit", (e) => {
       docRef
         .set({
           username: username,
-          bio: null,
-          pfp: null,
+          bio: "Hello, I'm new",
+          pfp:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Temp_plate.svg/601px-Temp_plate.svg.png",
         })
         .then(function () {
           /*
@@ -72,7 +73,7 @@ firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     login.classList.add("hidden");
     register.classList.add("hidden");
-    window.location.replace("profile.html");
+    //window.location.replace("profile.html");
   } else {
     login.classList.remove("hidden");
     register.classList.remove("hidden");
@@ -88,12 +89,3 @@ for (i = 0; i < 5; i++) {
     }
   });
 }
-
-/*Check state*/
-(function () {
-  firebase.auth().onAuthStateChanged((result) => {
-    if (result != null) {
-      window.location.replace("profile.html");
-    }
-  });
-})();

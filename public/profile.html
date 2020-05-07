@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
     <title>Profile</title>
-    <link rel="stylesheet" href="resources/css/main.css" type="text/css">
-    <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="resources/css/nav.css">
-</head>
-<body>
+    <link rel="stylesheet" href="resources/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="stylesheet" href="resources/css/nav.css" />
+  </head>
+  <body>
     <div id="settingsheader">
-       
-        <img id="settingslogo" src="resources/images/Mask Group.png">
-        <a href="settings.html"><img id="settingsarrow" src="resources/images/cog.png"></a>
+      <img id="settingslogo" src="resources/images/Mask Group.png" />
+      <a href="settings.html"
+        ><img id="settingsarrow" src="resources/images/cog.png"
+      /></a>
     </div>
 
     <div id="profinfo">
-      <img id="profpic" src="resources/images/profpic.png">
-      <h1 id="username">Photography_Pro</h1>
-      <p id="bio">My name is Photography_Pro and I have been taking pictures for 12 years. I use a Canon EOS 250D and an array of Canon lenses. </p>
-      
+      <img id="profpic" src=""" />
+      <h1 id="username"></h1>
+      <p id="bio"></p>
     </div>
     <div id="gal">
-      <img class="galimg" src="resources/images/gal1.png">
-      <img class="galimg" src="resources/images/gal2.png">
-      <img class="galimg" src="resources/images/gal3.png">
-      <img class="galimg" src="resources/images/gal4.png">
-      <img class="galimg" src="resources/images/gal5.png">
-      <img class="galimg" src="resources/images/gal6.png">
-      <img class="galimg" src="resources/images/gal1.png">
-      <img class="galimg" src="resources/images/gal2.png">
-      <img class="galimg" src="resources/images/gal3.png"></div>
-      <div id="space"></div>
+      <img class="galimg" src="resources/images/gal1.png" />
+      <img class="galimg" src="resources/images/gal2.png" />
+      <img class="galimg" src="resources/images/gal3.png" />
+      <img class="galimg" src="resources/images/gal4.png" />
+      <img class="galimg" src="resources/images/gal5.png" />
+      <img class="galimg" src="resources/images/gal6.png" />
+      <img class="galimg" src="resources/images/gal1.png" />
+      <img class="galimg" src="resources/images/gal2.png" />
+      <img class="galimg" src="resources/images/gal3.png" />
+    </div>
+
+    <div id="space"></div>
     <div id="navbar">
-        <a  href="javascript:void(0)"><img src="resources/images/homeicon.png"></a>
-        <a class="active" href="javascript:void(0)"><img src="resources/images/Group 12.png"></a>
-      </div>
-    
+      <a href="javascript:void(0)"
+        ><img src="resources/images/homeicon.png"
+      /></a>
+      <a class="active" href="javascript:void(0)"
+        ><img src="resources/images/Group 12.png"
+      /></a>
+    </div>
+    <script src="resources/js/firebase.js"></script>
+
+    <script src="resources/js/checkState.js"></script>
     <script src="resources/js/nav.js"></script>
-</body>
+    <script>
+      firebase.auth().onAuthStateChanged((result) => {
+        if (result) {
+          var username = document.querySelector("#username");
+          var bio = document.querySelector("#bio");
+          var photo = document.querySelector("#profpic");
+          console.log(firebase.auth().currentUser);
+          var userId = firebase.auth().currentUser.uid;
+          var docRef = firebase.firestore().collection("users").doc(userId);
+          docRef
+            .get()
+            .then(function (doc) {
+              if (doc.exists) {
+                console.log("Document data:");
+                bio.textContent = doc.data().bio;
+                username.textContent = doc.data().username;
+                photo.setAttribute("src", doc.data().pfp);
+              }
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+      });
+    </script>
+  </body>
 </html>
