@@ -3,3 +3,4 @@ firebase.auth().onAuthStateChanged((result) => {
     window.location.replace("index.html");
   }
 });
+

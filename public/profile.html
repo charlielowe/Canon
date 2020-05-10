@@ -24,25 +24,36 @@
     </div>
 
     <div id="profinfo">
+      <div id="profpicdiv">
       <img id="profpic" src=""" />
+      </div>
       <h1 id="username"></h1>
       <p id="bio"></p>
     </div>
+   
     <div id="gal">
-      <img class="galimg" src="resources/images/gal1.png" />
-      <img class="galimg" src="resources/images/gal2.png" />
-      <img class="galimg" src="resources/images/gal3.png" />
-      <img class="galimg" src="resources/images/gal4.png" />
-      <img class="galimg" src="resources/images/gal5.png" />
-      <img class="galimg" src="resources/images/gal6.png" />
-      <img class="galimg" src="resources/images/gal1.png" />
-      <img class="galimg" src="resources/images/gal2.png" />
-      <img class="galimg" src="resources/images/gal3.png" />
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/Home/erik-mclean-2Wv9VnwzeeI-unsplash.jpg" /></div>
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal2.png" /></div>
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal3.png" /></div>
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal4.png" /></div>
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal5.png" /></div>
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal6.png" /></div>
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal1.png" /></div>
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal2.png" /></div>
+      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal3.png" /></div>
+    </div>
+
+    
+
+    <div id="myModal" class="modal">
+      <div id="modalcrop">
+      <img class="modal-content" id="img01">
+    </div>
     </div>
 
     <div id="space"></div>
     <div id="navbar">
-      <a href="javascript:void(0)"
+      <a href="feed.html"
         ><img src="resources/images/homeicon.png"
       /></a>
       <a class="active" href="javascript:void(0)"
@@ -53,6 +64,7 @@
 
     <script src="resources/js/checkState.js"></script>
     <script src="resources/js/nav.js"></script>
+    <script src ="resources/js/modal.js"></script>
     <script>
       firebase.auth().onAuthStateChanged((result) => {
         if (result) {

@@ -13,10 +13,7 @@ body {
   margin-top: 15vh;
   width: 100vw;
   height: 100vh;
-  
 }
-
-
 
 #header {
   width: 100%;
@@ -35,9 +32,8 @@ body {
   height: 10vh;
   margin: 0px;
   padding: 0px;
-  background:  #424242;
+  background: #424242;
   box-shadow: 0px 4px 5px #000000;
- 
 }
 #logo {
   width: 40vw;
@@ -55,7 +51,6 @@ body {
   height: 7vh;
   margin: auto;
   position: absolute;
-  
 }
 #container {
   display: flex;
@@ -246,8 +241,6 @@ body {
   width: 100%;
 }
 
-
-
 .setting {
   float: left;
   display: block;
@@ -262,21 +255,18 @@ body {
   font-family: Roboto;
   padding-top: 4vh;
   margin-top: 3vh;
-
 }
 
-#editprofilecontainer{
+#editprofilecontainer {
   margin-top: 30vh;
   text-align: center;
 }
 
-
-
-.profile{
+.profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   text-align: center;
   margin-left: 5vw;
   margin-right: 5vw;
@@ -291,7 +281,15 @@ body {
   top: 20%;
 }
 
-#editprofileset{
+#uploadicon {
+  margin-right: 0vw;
+  position: absolute;
+  width: 12vw;
+  right: 5vw;
+  top: 5%;
+}
+
+#editprofileset {
   background-color: #333;
   border-style: solid;
   color: white;
@@ -300,11 +298,11 @@ body {
   font-size: 2vh;
 }
 
-.outputText{
+.outputText {
   color: white;
 }
 
-.update{
+.update {
   margin-top: 15vh;
   font-family: Roboto;
   font-style: normal;
@@ -315,14 +313,12 @@ body {
   color: white;
   background-color: #333;
   border: none;
-
 }
 
 #settingslogo {
   margin-top: 1vh;
   height: 4vh;
   width: 30vw;
-  
 }
 
 #loginbox2 {
@@ -382,102 +378,117 @@ body {
   color: #c2c2c2;
 }
 
-#profinfo{
+#profinfo {
   background-color: #161616;
   width: 100%;
-  height: 50vh;
- text-align: center;
+  
+  padding-top: 10vh;
+  height: 40vh;
+  text-align: center;
 }
 
-#profpic{
-  margin-top: 10vh;
-  width: 15vh;
+#profpic {
+  width: 100%;
+  height: 100%;
+ object-fit: cover;
 }
 
-#username{
+#username {
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 5vh;
 }
 
-#bio{
+#bio {
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   margin-left: 8vw;
+  word-wrap: break-word;
   margin-right: 8vw;
-  font-size:2vh;
+  font-size: 2vh;
 }
 
-#gal{
-  text-align: center;
+#gal {
+ 
+  
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
   width: 100%;
 }
 
-.galimg{
-  width: 32.5vw;
-  margin: 0;
+
+.galimg {
+  
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+#imgdiv{
+  width: 33.3vw;
+  height: 33.3vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
 
 }
 
-#space{
+#space {
   height: 8vh;
 }
 .camera-icon {
- padding-left: 75vw;
- height: 12vh;
- 
- 
+  padding-left: 75vw;
+  height: 12vh;
 }
 .feed {
   height: 80vh;
+  margin-top: 7vh;
   max-height: 80vh;
   background-color: #0f0f0f;
   overflow: auto;
   white-space: nowrap;
   overflow-y: hidden;
-
 }
 .navbar {
   display: flex;
   height: 10vh;
-   
+
   background-color: #424242;
 }
 .navIcons {
   height: 50px;
   margin: auto;
-  
 }
 .iconsDiv {
   display: flex;
   width: 25%;
-  
 }
-
 
 .info {
   display: flex;
-  justify-content: center;
+  
   align-items: center;
   height: 10vh;
 }
-  
-  
+
 .pp {
-  
-  margin-left: 7vw;
+  margin-left: 5vw;
   margin-right: 5vw;
-  height: 9vh;
-  width: 9vw;
+  height: 6vh;
+  width: 6vh;
   border-radius: 50%;
 }
 .pName {
-  
   margin: 0px;
   text-align: center;
-  font-size: 5vh;
+  font-size: 4vh;
   font-family: Roboto;
   color: #c2c2c2;
 }
@@ -490,4 +501,75 @@ body {
 .post {
   display: inline-block;
   overflow-y: hidden;
+}
+
+#profpicdiv {
+  width: 15vh;
+  height: 15vh;
+  margin: 0 auto;
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  
+ 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+#modalcrop{
+  width: 100%;
+    height: 100%;
+    
+  
+}
+
+.modal-content {
+  margin: auto;
+  
+  right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    position: absolute;
+  vertical-align: middle;
+  max-width: 700px;
+}
+
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }
