@@ -50,7 +50,7 @@ fileButton.addEventListener("change", function (e) {
             picture: downloadURL,
             caption: caption.value,
             uid: postId,
-            date: new Date(),
+            date: new Date().getTime(),
           })
           .catch(function (error) {
             console.log(error);
