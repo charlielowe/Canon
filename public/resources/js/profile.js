@@ -25,6 +25,7 @@ firebase.auth().onAuthStateChanged((result) => {
       .collection("posts")
       .doc(userId)
       .collection("userPosts")
+      .orderBy("date", "desc")
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {

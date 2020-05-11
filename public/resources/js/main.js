@@ -16,6 +16,9 @@ function hider(option) {
     loginBox.style.visibility = "hidden";
     signupBox.style.visibility = "visible";
   }
+  if (firebase.auth().currentUser) {
+    window.location.replace("profile.html");
+  }
 }
 
 /*Register*/
