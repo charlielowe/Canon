@@ -1,11 +1,6 @@
 var caption = document.querySelector(".captionBox");
 var firestore = firebase.firestore();
-/*Check state*/
-firebase.auth().onAuthStateChanged((result) => {
-  if (result == null) {
-    window.location.replace("index.html");
-  }
-});
+
 var postId =
   Math.random().toString(36).substring(2, 15) +
   Math.random().toString(36).substring(2, 15);
@@ -46,13 +41,16 @@ fileButton.addEventListener("change", function (e) {
 
         docRef = firebase
           .firestore()
-          .collection("posts/")
-          .doc(firebase.auth().currentUser.uid);
+          .collection("posts")
+          .doc(firebase.auth().currentUser.uid)
+          .collection("userPosts")
+          .doc(postId);
         docRef
           .set({
             picture: downloadURL,
             caption: caption.value,
             uid: postId,
+            date: new Date(),
           })
           .catch(function (error) {
             console.log(error);
@@ -62,4 +60,3 @@ fileButton.addEventListener("change", function (e) {
   );
 });
 /*Uploads post using the url from images*/
-

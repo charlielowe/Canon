@@ -25,37 +25,29 @@
 
     <div id="profinfo">
       <div id="profpicdiv">
-      <img id="profpic" src="" />
+        <img id="profpic" src="" />
       </div>
       <h1 id="username"></h1>
       <p id="bio"></p>
     </div>
-   
-    <div id="gal">
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/gal5.png"></div>
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/jamie/IMG_20191122_114758_525.jpg" /></div>
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/jamie/jamiememeeeme.png" /></div>
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/jamie/Screenshot_20191103-150304.jpg" /></div>
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/jamie/Screenshot_20191210-130937.jpg" /></div>
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/jamie/Screenshot_20191212-201427.jpg" /></div>
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/jamie/Screenshot_20191213-193336.jpg" /></div>
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/jamie/Screenshot_20191118-095223.jpg" /></div>
-      <div id="imgdiv"><img class="galimg Img"  src="resources/images/image 20.png" /></div>
-    </div>
 
-    
+    <div id="gal">
+      <template>
+        <div id="imgdiv">
+          <img class="galimg Img" src="test" />
+        </div>
+      </template>
+    </div>
 
     <div id="myModal" class="modal">
       <div id="modalcrop">
-      <img class="modal-content" id="img01">
-    </div>
+        <img class="modal-content" id="img01" />
+      </div>
     </div>
 
     <div id="space"></div>
     <div id="navbar">
-      <a href="feed.html"
-        ><img src="resources/images/homeicon.png"
-      /></a>
+      <a href="feed.html"><img src="resources/images/homeicon.png" /></a>
       <a class="active" href="javascript:void(0)"
         ><img src="resources/images/Group 12.png"
       /></a>
@@ -64,31 +56,7 @@
 
     <script src="resources/js/checkState.js"></script>
     <script src="resources/js/nav.js"></script>
-    <script src ="resources/js/modal.js"></script>
-    <script>
-      firebase.auth().onAuthStateChanged((result) => {
-        if (result) {
-          var username = document.querySelector("#username");
-          var bio = document.querySelector("#bio");
-          var photo = document.querySelector("#profpic");
-          console.log(firebase.auth().currentUser);
-          var userId = firebase.auth().currentUser.uid;
-          var docRef = firebase.firestore().collection("users").doc(userId);
-          docRef
-            .get()
-            .then(function (doc) {
-              if (doc.exists) {
-                console.log("Document data:");
-                bio.textContent = doc.data().bio;
-                username.textContent = doc.data().username;
-                photo.setAttribute("src", doc.data().pfp);
-              }
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
-        }
-      });
-    </script>
+    <script src="resources/js/modal.js"></script>
+    <script src="resources/js/profile.js"></script>
   </body>
 </html>
