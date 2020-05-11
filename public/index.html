@@ -118,6 +118,13 @@
       </div>
     </div>
     <script src="resources/js/firebase.js"></script>
+    <script >
+    firebase.auth().onAuthStateChanged((result) => {
+      if (result) {
+        window.location.replace("feed.html");
+      }
+    });</script>
     <script src="resources/js/main.js"></script>
+   
   </body>
 </html>

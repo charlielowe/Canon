@@ -2,34 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>test posts</title>
-  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="resources/css/main.css">
-  <link rel="stylesheet" href="resources/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+    <title>Feed</title>
+    <link rel="stylesheet" href="resources/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="stylesheet" href="resources/css/nav.css" />
 </head>
 
 <body>
-  <div id="headerHome">
-    <a href="uploadpost.html"><img src="resources/images/Home/camera-icon.png" alt="camera" class=" camera-icon"></a>
-    <img id="logoHome" src="resources/images/Mask Group.png" />
+  
+  <div id="settingsheader">
+    <img id="settingslogo" src="resources/images/Mask Group.png" />
+    <a href="uploadpost.html"
+      ><img id="uploadicon" src="resources/images/Mask Group (1).png"
+    /></a>
   </div>
   <div class="feed">
     <div class="post">
       <div class="info">
-        <!--<img src="resources/images/Home/bambi-corro-fTPUpUhiBSc-unsplash (1).jpg" alt="" class="pp">-->
+        <img src="resources/images/Home/bambi-corro-fTPUpUhiBSc-unsplash (1).jpg" alt="" class="pp">
         <h1 class="pName">Steve Mack</h1>
       </div>
       <img src="resources/images/Home/aldain-austria-v0zVmWULYTg-unsplash.jpg" alt="" class="postImg">
     </div>
     <div class="post">
       <div class="info">
-        <!--<img src="resources/images/Home/erik-mclean-2Wv9VnwzeeI-unsplash.jpg" alt="" class="pp">-->
+       <img src="resources/images/Home/erik-mclean-2Wv9VnwzeeI-unsplash.jpg" alt="" class="pp">
         <h1 class="pName">James Hark</h1>
       </div>
       <img src="resources/images/Home/william-bayreuther-hfk6xOjQlFk-unsplash.jpg" alt="" class="postImg">
@@ -44,22 +49,14 @@
 
 
 
-  <div class="navbar">
-    <div class="iconsDiv">
-      <img src="resources/images/Home/home-icon.png" alt="" class="navIcons homeIcon">
-    </div>
-
-    <div class="iconsDiv">
-      <img src="resources/images/Home/search-icon.png" alt="" class="navIcons">
-    </div>
-
-    <div class="iconsDiv">
-      <img src="resources/images/Home/shop-icon.png" alt="" class="navIcons">
-    </div>
-
-    <div class="iconsDiv">
-      <img src="resources/images/Home/profile-icon.png" alt="" class="navIcons">
-    </div>
+  <div id="navbar">
+    <a class="active" href="feed.html"
+      ><img src="resources/images/homeicon.png"
+    /></a>
+    <a  href="profile.html"
+      ><img src="resources/images/Group 12.png"
+    /></a>
+  </div>
 
   </div>
   </div>

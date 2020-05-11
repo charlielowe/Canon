@@ -42,7 +42,7 @@ register.addEventListener("submit", (e) => {
           TODO: Unique usernames
           */
           console.log("good");
-          window.location.replace("profile.html");
+          window.location.replace("feed.html");
         })
         .catch(function (error) {
           console.log(error);
@@ -61,7 +61,7 @@ login.addEventListener("submit", (e) => {
     .then((user) => {
       login.reset();
       login.querySelector(".error").textContent = "Success";
-      window.location.replace("profile.html");
+      window.location.replace("feed.html");
     })
     .catch((e) => {
       login.querySelector(".error").textContent = e.message;
