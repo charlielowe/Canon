@@ -573,3 +573,22 @@ body {
     width: 100%;
   }
 }
+
+#terms{
+  color: white;
+  margin-top: 5vh;
+ 
+  font-family: Roboto;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+
+#termstitle{
+  color: white;
+  text-align: center;
+  margin-top: 20vh;
+  font-family: Roboto;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
