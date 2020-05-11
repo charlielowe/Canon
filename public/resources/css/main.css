@@ -412,7 +412,7 @@ body {
 
 #gal {
  
-  
+  overflow-y: scroll;
   padding: 0;
   display: flex;
   flex-flow: row wrap;
