@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test posts</title>
-    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test posts</title>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="resources/css/main.css">
+  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="resources/css/nav.css">
+</head>
+
+<body>
+
+
+  <div id="headerHome">
+
+    <img id="logoHome" src="resources/images/Mask Group.png" />
+  </div>
+  <div class="uploadBox">
+    <input type="file" value="upload" id="fileButton" class="fileButton" />
+    <div class="uploadImgBox">
+      <img src="resources/images/Uploads/addnewdocument_118445.png" alt="upload" class="uploadImg">
+    </div>
+  </div>
+  <div class="captionTxtDiv">
+    <h1 class="captionTxt">Caption</h1>
+  </div>
+  <div class="captionBoxDiv">
     <div class="upload">
       <input type="text" class="captionBox" />
     </div>
-    <input type="file" value="upload" id="fileButton" />
-    <script src="resources/js/checkState.js"></script>
-    <script src="resources/js/firebase.js"></script>
-    <script src="resources/js/upload.js"></script>
-  </body>
+  </div>
+  <div class="postDiv">
+    <button class="postButton">Post</button>
+   
+  </div>
+
+
+  <div id="navbar">
+    <a href="javascript:void(0)"><img src="resources/images/homeicon.png" /></a>
+
+  </div>
+
+  <script src="resources/js/checkState.js"></script>
+  <script src="resources/js/firebase.js"></script>
+  <script src="resources/js/home.js"></script>
+  <script src="resources/js/nav.js"></script>
+</body>
+
 </html>
