@@ -1,4 +1,4 @@
-var caption = document.querySelector(".captionBox");
+
 var firestore = firebase.firestore();
 
 var postId =
@@ -48,7 +48,7 @@ fileButton.addEventListener("change", function (e) {
         docRef
           .set({
             picture: downloadURL,
-            caption: caption.value,
+           
             uid: postId,
             date: new Date().getTime(),
           })
